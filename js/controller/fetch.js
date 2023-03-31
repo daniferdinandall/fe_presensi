@@ -1,28 +1,11 @@
 import { get } from "https://bukulapak.github.io/api/process.js"; 
-// function get(target_url,responseFunction){
-//     var requestOptions = {
-//     method: 'GET',
-//     redirect: 'follow'
-//     };
-
-//     fetch(target_url, requestOptions)
-//     .then(response => response.text())
-//     .then(result => responseFunction(JSON.parse(result)))
-//     .catch(error => console.log('error', error));
-// }
 
 let urlAPI = "https://ws-dani.herokuapp.com/presensi";
 get(urlAPI,isiTablePresensi);
 function isiTablePresensi(results){
     console.log(results);
+    results.forEach(isiRow);
 }
-
-// var requestOptions = {
-//     method: 'GET',
-//     redirect: 'follow'
-// };
-
-// fetch("https://ws-dani.herokuapp.com/presensi", requestOptions)
-//     .then(response => response.text())
-//     .then(result => console.log(result))
-//     .catch(error => console.log('error', error));
+function isiRow(value){
+    console.log(value)
+}
