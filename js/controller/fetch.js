@@ -16,3 +16,13 @@ get(urlAPI,isiTablePresensi);
 function isiTablePresensi(results){
     console.log(results);
 }
+
+// var requestOptions = {
+//     method: 'GET',
+//     redirect: 'follow'
+// };
+
+// fetch("https://ws-dani.herokuapp.com/presensi", requestOptions)
+//     .then(response => response.text())
+//     .then(result => console.log(result))
+//     .catch(error => console.log('error', error));
