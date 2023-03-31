@@ -5,7 +5,7 @@ export function isiTablePresensi(results) {
     results.forEach(isiRow);
 }
 function isiRow(value) {
-    console.log(value.jam_kerja)
+    // console.log(value.jam_kerja)
     let content =
         isiTabel.replace("#NAMA#", value.biodata.nama)
             .replace("#NOHP#", value.biodata.phone_number)
@@ -13,9 +13,9 @@ function isiRow(value) {
             .replace("#LOKASI#", value.location)
             .replace("#STATUS#", value.checkin)
             .replace("#HARIKERJA#", value.biodata.hari_kerja)
-            .replace("#JAMKERJA#", value.jam_kerja[0].durasi)
-            .replace("#JAMMASUK#", value.jam_kerja[0].jam_masuk)
-            .replace("#JAMKELUAR#", value.jam_kerja[0].jam_keluar)
+            .replace("#JAMKERJA#", value.biodata.jam_kerja[0].durasi)
+            .replace("#JAMMASUK#", value.biodata.jam_kerja[0].jam_masuk)
+            .replace("#JAMKELUAR#", value.biodata.jam_kerja[0].jam_keluar)
             .replace("#WARNA#", getRandomColor())
             .replace(/#WARNALOGO#/g, getRandomColorName());
     addInner("iniTabel", content);
