@@ -13,9 +13,9 @@ function isiRow(value) {
             .replace("#STATUS#", value.checkin)
             .replace("#HARIKERJA#", value.biodata.hari_kerja)
             .replace("#WARNA#", getRandomColor())
-            .replace("#JAMKERJA#", jam_kerja[0].durasi)
-            .replace("#JAMMASUK#", jam_kerja[0].jam_masuk)
-            .replace("#JAMKELUAR#", jam_kerja[0].jam_keluar)
+            .replace("#JAMKERJA#", value.jam_kerja[0].durasi)
+            .replace("#JAMMASUK#", value.jam_kerja[0].jam_masuk)
+            .replace("#JAMKELUAR#", value.jam_kerja[0].jam_keluar)
             .replace(/#WARNALOGO#/g, getRandomColorName());
     addInner("iniTabel", content);
 }
